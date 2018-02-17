@@ -1,0 +1,4 @@
+class Restaurant():
+    """A Class representing a Restaurant."""
+
+    def __init__(self, name, cuisine_type):
