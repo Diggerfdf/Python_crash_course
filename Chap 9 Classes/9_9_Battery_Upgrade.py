@@ -35,7 +35,7 @@ class Car():
 class Battery():
     """A simple attempt to model a battery for an ellectric car."""
 
-    def __init__(self, battery_size=70):
+    def __init__(self, battery_size=60):
         """Initialize the battery's attributes."""
         self.battery_size = battery_size
 
@@ -45,14 +45,22 @@ class Battery():
 
     def get_range(self):
         """Print a statement about the range this battery provides."""
-        if self.battery_size == 70:
-            range = 240
+        if self.battery_size == 60:
+            range = 140
         elif self.battery_size == 85:
-            range = 270
+            range = 185
 
         message = "This car can go approximately " + str(range)
         message += " miles on a full charge."
         print(message)
+
+    def upgrade_battery(self):
+        """Upgrade the battery if possible."""
+        if self.battery_size == 60:
+            self.battery_size = 85
+            print("Upgraded the battery to 85 KWh.")
+        else:
+            print("The Battery is already upgraded.")
 
 
 class ElectricCar(Car):
@@ -71,8 +79,14 @@ class ElectricCar(Car):
         print("This car doesn't need a gas tank!")
 
 
+print("Make an electric car, and check the battery:")
 my_tesla = ElectricCar('tesla', 'model s', 2016)
-
-print(my_tesla.get_descriptive_name())
 my_tesla.battery.describe_battery()
-my_tesla.battery.get_range()
+
+print("\nUpgrade the batttery, and check it again:")
+my_tesla.battery.upgrade_battery()
+my_tesla.battery.describe_battery()
+
+print("\nTry upgrading the battery a second time.")
+my_tesla.battery.upgrade_battery()
+my_tesla.battery.describe_battery()
