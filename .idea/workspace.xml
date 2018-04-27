@@ -8,8 +8,11 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ShelveChangesManager" show_recycled="false">
-    <option name="remove_strategy" value="false" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="1131" />
+    <option name="y" value="23" />
+    <option name="width" value="789" />
+    <option name="height" value="982" />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
